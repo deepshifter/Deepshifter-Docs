@@ -1,0 +1,22 @@
+# Uniswap Quote
+
+```js filename="uniswapquote.js" {3} copy
+const axios = require('axios');
+
+const options = {
+  method: 'GET',
+  url: 'https://deepshifter.p.rapidapi.com/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/3000/0/1.75',
+  headers: {
+    'content-type': 'application/octet-stream',
+    'X-RapidAPI-Key': '81f1780d79msh47993b062f18314p181e3cjsnb51945f8fa0a',
+    'X-RapidAPI-Host': 'deepshifter.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
+```
